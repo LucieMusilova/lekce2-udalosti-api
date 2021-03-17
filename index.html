@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JavaScript a DOM</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript a DOM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <p class="veta">V elipse spí lev.</p>
 
-	<h1>Změna tříd, události</h1>
+      <button onmouseover="priNajeti()" onclick="cerveny()">
+        Červený po kliknutí
+      </button>
+      <button onclick="zvetsi()">Zvětšit</button>
 
-	<div class="ctverecek zluty"></div>
+      <audio id="zvuk" src="audio/dingdingdang.mp3" preload="auto"></audio>
+    </section>
 
-	<div class="ctverecek zeleny"></div>
+    <section>
+      <button onclick="prehraj('#zvuk')">Přehraj</button>
+      <button onclick="zastav('#zvuk')">Zastav</button>
+      <button onclick="mute()">Ztišit zvuk</button>
+      <button onclick="stredni('#zvuk')">Střední zvuk</button>
+      <button onclick="zesil('#zvuk')">Hlasitý zvuk</button>
+      <button onclick="zacatek('#zvuk')">Vrátit na začátek</button>
+    </section>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
-
-	<button class="tlacitko">Čudlajs</button>
-
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
-
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
